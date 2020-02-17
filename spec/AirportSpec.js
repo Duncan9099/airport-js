@@ -15,8 +15,6 @@ describe("Airport", function() {
                 checkedWeather = value
             }
         }
-
-        // weather.checkWeather("Sunny")
     })
 
     describe('land plane', function() {
@@ -38,11 +36,6 @@ describe("Airport", function() {
             expect(airport.occupancy.length).toEqual(5)
             expect(airport.land(plane)).toEqual("Landing refused. Airport capacity reached")
             expect(airport.occupancy.length).toEqual(5)
-        })
-
-        it('cannot land if weather is stormy', function() {
-            weather.checkWeather("Stormy")
-            expect(airport.land(plane, weather)).toEqual("Landing refused: Weather issues.")
         })
     })
 
